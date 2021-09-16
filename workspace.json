@@ -2,18 +2,18 @@
   "version": 2,
   "projects": {
     "apollo-server-example": {
-      "root": "packages/apollo-server-example",
-      "sourceRoot": "packages/apollo-server-example/src",
+      "root": "apps/apollo-server-example",
+      "sourceRoot": "apps/apollo-server-example/src",
       "projectType": "application",
       "targets": {
         "build": {
           "executor": "@nrwl/node:build",
           "outputs": ["{options.outputPath}"],
           "options": {
-            "outputPath": "dist/packages/apollo-server-example",
-            "main": "packages/apollo-server-example/src/main.ts",
-            "tsConfig": "packages/apollo-server-example/tsconfig.app.json",
-            "assets": ["packages/apollo-server-example/src/assets"]
+            "outputPath": "dist/apps/apollo-server-example",
+            "main": "apps/apollo-server-example/src/main.ts",
+            "tsConfig": "apps/apollo-server-example/tsconfig.app.json",
+            "assets": ["apps/apollo-server-example/src/assets"]
           },
           "configurations": {
             "production": {
@@ -22,8 +22,8 @@
               "inspect": false,
               "fileReplacements": [
                 {
-                  "replace": "packages/apollo-server-example/src/environments/environment.ts",
-                  "with": "packages/apollo-server-example/src/environments/environment.prod.ts"
+                  "replace": "apps/apollo-server-example/src/environments/environment.ts",
+                  "with": "apps/apollo-server-example/src/environments/environment.prod.ts"
                 }
               ]
             }
@@ -39,14 +39,14 @@
           "executor": "@nrwl/linter:eslint",
           "outputs": ["{options.outputFile}"],
           "options": {
-            "lintFilePatterns": ["packages/apollo-server-example/**/*.ts"]
+            "lintFilePatterns": ["apps/apollo-server-example/**/*.ts"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/packages/apollo-server-example"],
+          "outputs": ["coverage/apps/apollo-server-example"],
           "options": {
-            "jestConfig": "packages/apollo-server-example/jest.config.js",
+            "jestConfig": "apps/apollo-server-example/jest.config.js",
             "passWithNoTests": true
           }
         }
