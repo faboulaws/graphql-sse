@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@graphql-sse/client": ["libs/client/src/index.ts"],
       "@graphql-sse/express": ["libs/express/src/index.ts"]
     }
   },

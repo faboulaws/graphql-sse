@@ -30,6 +30,9 @@
     "apollo-server-example": {
       "tags": []
     },
+    "client": {
+      "tags": []
+    },
     "express": {
       "tags": []
     }
