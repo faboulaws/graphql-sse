@@ -27,6 +27,9 @@
     ]
   },
   "projects": {
+    "apollo-client": {
+      "tags": []
+    },
     "apollo-server-example": {
       "tags": []
     },
