@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@graphql-sse/express": ["packages/express/src/index.ts"]
+      "@graphql-sse/express": ["libs/express/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

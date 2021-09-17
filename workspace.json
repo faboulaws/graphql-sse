@@ -13,7 +13,8 @@
             "outputPath": "dist/apps/apollo-server-example",
             "main": "apps/apollo-server-example/src/main.ts",
             "tsConfig": "apps/apollo-server-example/tsconfig.app.json",
-            "assets": ["apps/apollo-server-example/src/assets"]
+            "assets": ["apps/apollo-server-example/src/assets"],
+            "webpackConfig": "apps/apollo-server-example/webpack.config.js"
           },
           "configurations": {
             "production": {
@@ -53,21 +54,21 @@
       }
     },
     "express": {
-      "root": "packages/express",
-      "sourceRoot": "packages/express/src",
+      "root": "libs/express",
+      "sourceRoot": "libs/express/src",
       "projectType": "library",
       "targets": {
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["packages/express/**/*.ts"]
+            "lintFilePatterns": ["libs/express/**/*.ts"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/packages/express"],
+          "outputs": ["coverage/libs/express"],
           "options": {
-            "jestConfig": "packages/express/jest.config.js",
+            "jestConfig": "libs/express/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -75,11 +76,11 @@
           "executor": "@nrwl/node:package",
           "outputs": ["{options.outputPath}"],
           "options": {
-            "outputPath": "dist/packages/express",
-            "tsConfig": "packages/express/tsconfig.lib.json",
-            "packageJson": "packages/express/package.json",
-            "main": "packages/express/src/index.ts",
-            "assets": ["packages/express/*.md"]
+            "outputPath": "dist/libs/express",
+            "tsConfig": "libs/express/tsconfig.lib.json",
+            "packageJson": "libs/express/package.json",
+            "main": "libs/express/src/index.ts",
+            "assets": ["libs/express/*.md"]
           }
         }
       }
