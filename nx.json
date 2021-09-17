@@ -38,6 +38,13 @@
     },
     "express": {
       "tags": []
+    },
+    "react-app-example": {
+      "tags": []
+    },
+    "react-app-example-e2e": {
+      "tags": [],
+      "implicitDependencies": ["react-app-example"]
     }
   },
   "workspaceLayout": {
