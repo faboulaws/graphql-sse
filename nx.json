@@ -45,6 +45,9 @@
     "react-app-example-e2e": {
       "tags": [],
       "implicitDependencies": ["react-app-example"]
+    },
+    "server": {
+      "tags": []
     }
   },
   "workspaceLayout": {

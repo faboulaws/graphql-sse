@@ -94,7 +94,8 @@
             "jestConfig": "libs/client/jest.config.js",
             "passWithNoTests": true
           }
-        }, "build": {
+        },
+        "build": {
           "executor": "@nrwl/node:package",
           "outputs": ["{options.outputPath}"],
           "options": {
@@ -239,6 +240,39 @@
           "outputs": ["{options.outputFile}"],
           "options": {
             "lintFilePatterns": ["apps/react-app-example-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "server": {
+      "root": "libs/server",
+      "sourceRoot": "libs/server/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/server/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/server"],
+          "options": {
+            "jestConfig": "libs/server/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/server",
+            "tsConfig": "libs/server/tsconfig.lib.json",
+            "packageJson": "libs/server/package.json",
+            "main": "libs/server/src/index.ts",
+            "assets": ["libs/server/*.md"]
           }
         }
       }
