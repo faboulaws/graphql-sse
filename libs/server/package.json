@@ -22,10 +22,10 @@
   },
   "homepage": "https://github.com/faboulaws/graphql-sse/libs/server#readme",
   "devDependencies": {
-    "graphql": ">=0.11 <=16"
+    "graphql": "^15.6.0"
   },
   "peerDependencies": {
-    "graphql": "^15.6.0"
+    "graphql": ">=0.11 <=16"
   },
   "publishConfig": {
     "access": "public",
