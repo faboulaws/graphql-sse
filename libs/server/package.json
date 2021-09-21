@@ -1,6 +1,6 @@
 {
   "name": "@graphql-sse/server",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "GraphQL Subscription over SSE",
   "main": "dist/src/index.js",
   "scripts": {
