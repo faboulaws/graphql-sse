@@ -20,6 +20,16 @@
             "jestConfig": "libs/apollo-client/jest.config.js",
             "passWithNoTests": true
           }
+        },"build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/apollo-client",
+            "tsConfig": "libs/apollo-client/tsconfig.lib.json",
+            "packageJson": "libs/apollo-client/package.json",
+            "main": "libs/apollo-client/src/index.ts",
+            "assets": ["libs/apollo-client/*.md"]
+          }
         }
       }
     },
