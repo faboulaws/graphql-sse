@@ -5,7 +5,7 @@ This package provide a GraphQL subscription server over Express.
 ## Installation
 
 ```shell
-npm install @graph-sse/express
+npm install @graphql-sse/express
 ```
 
 ## Basic usage
@@ -18,7 +18,7 @@ import express, { RequestHandler } from "express";
 import {
   getGraphQLParameters,
   processSubscription,
-} from "@graph-sse/server";
+} from "@graphql-sse/server";
 import { schema } from "./schema";
 
 const app = express();

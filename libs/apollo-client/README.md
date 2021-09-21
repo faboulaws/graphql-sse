@@ -5,7 +5,7 @@ A client for GraphQL subscription using Server Sent Events.
 ## Installation
 
 ```shell
-npm install @graph-sse/apollo-client
+npm install @graphql-sse/apollo-client
 ```
 
 ## Usage

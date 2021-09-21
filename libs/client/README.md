@@ -5,7 +5,7 @@ A client for GraphQL subscription using Server Sent Events.
 ## Installation
 
 ```shell
-npm install @graph-sse/client
+npm install @graphql-sse/client
 ```
 
 ## Usage
@@ -89,4 +89,4 @@ export const client = new ApolloClient({
 
 ```
 
-**Note:** Alternatively, you can use the [`@graph-sse/apollo-client`](htts://github.com/faboulaws/grahql-sse/libs/apollo-client) that wraps this `@graph-sse/client`. See the  [Example React App](htts://github.com/faboulaws/grahql-sse/apps/react-app-example)
+**Note:** Alternatively, you can use the [`@graphql-sse/apollo-client`](htts://github.com/faboulaws/grahql-sse/libs/apollo-client) that wraps this `@graphql-sse/client`. See the  [Example React App](htts://github.com/faboulaws/grahql-sse/apps/react-app-example)

@@ -1,23 +1,23 @@
-# @graph-sse/server
+# @graphql-sse/server
 
 This package provide utility function for implementing GraphQL Subscriptions transport over Server Send Events. This package is inspired by the awesome [GraphQL Helix](https://github.com/contrawork/graphql-helix).
 
 ## Installation
 
 ```shell
-npm install @graph-sse/server
+npm install @graphql-sse/server
 ```
 
 ## Basic usage
 
-Here is a simple example of how to use it with express. Alternatively you can use the  `@graph-sse/express`  package.
+Here is a simple example of how to use it with express. Alternatively you can use the  `@graphql-sse/express`  package.
 
 ```typescript
 import express, { RequestHandler } from "express";
 import {
   getGraphQLParameters,
   processSubscription,
-} from "@graph-sse/server";
+} from "@graphql-sse/server";
 import { schema } from "./schema";
 
 const app = express();
