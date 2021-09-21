@@ -2,7 +2,7 @@
   "name": "@graphql-sse/apollo-client",
   "version": "0.0.5",
   "description": "This library was generated with [Nx](https://nx.dev).",
-  "main": "dist/src/index.js",
+  "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
