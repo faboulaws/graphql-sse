@@ -30,5 +30,6 @@
   "publishConfig": {
     "access": "public",
     "directory": "../../dist/libs/server"
-  }
+  },
+  "gitHead": "85399740b907705c99b5aa313d905f491d65de1e"
 }

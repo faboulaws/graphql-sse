@@ -9,7 +9,7 @@
     "graphql": ">=0.11 <=16"
   },
   "description": "This library was generated with [Nx](https://nx.dev).",
-  "main": "dist/src/index.js",
+  "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
