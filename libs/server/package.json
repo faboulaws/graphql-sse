@@ -1,4 +1,30 @@
 {
   "name": "@graphql-sse/server",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "description": "This library was generated with [Nx](https://nx.dev).",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faboulaws/graphql-sse.git"
+  },
+  "keywords": [
+    "GraphQL",
+    "SSE",
+    "Server"
+  ],
+  "author": "Lod Lawson <faboulaws@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/faboulaws/graphql-sse/issues"
+  },
+  "homepage": "https://github.com/faboulaws/graphql-sse/libs/server#readme",
+  "devDependencies": {
+    "graphql": ">=0.11 <=16"
+  },
+  "peerDependencies": {
+    "graphql": "^15.6.0"
+  }
 }

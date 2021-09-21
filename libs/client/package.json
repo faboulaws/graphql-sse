@@ -1,7 +1,7 @@
 {
   "name": "client",
   "version": "1.0.0",
-  "description": "GraphQL Subcription client",
+  "description": "GraphQL Subscription client",
   "main": "dist/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,5 +10,8 @@
     "graphql-sse"
   ],
   "author": "Lod Lawson",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@microsoft/fetch-event-source": "^2.0.1"
+  }
 }

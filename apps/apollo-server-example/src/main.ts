@@ -1,1 +1,5 @@
-console.log('Hello World!');
+import { startApp } from './app';
+
+(function () {
+  startApp();
+})();
