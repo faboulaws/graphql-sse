@@ -1,5 +1,5 @@
 {
-  "name": "client",
+  "name": "@graphql-sse/client",
   "version": "0.0.1",
   "description": "GraphQL Subscription client",
   "main": "dist/src/index.js",
