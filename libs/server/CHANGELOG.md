@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.6](https://github.com/faboulaws/graphql-sse/compare/@graphql-sse/server@0.0.5...@graphql-sse/server@0.0.6) (2021-09-21)
+
+
+### Bug Fixes
+
+* server entry point ([8160389](https://github.com/faboulaws/graphql-sse/commit/8160389daf69f1b3902d241d96bd59d0da51af9d))
+
+
+
+
+
 ## [0.0.5](https://github.com/faboulaws/graphql-sse/compare/@graphql-sse/server@0.0.4...@graphql-sse/server@0.0.5) (2021-09-21)
 
 **Note:** Version bump only for package @graphql-sse/server
