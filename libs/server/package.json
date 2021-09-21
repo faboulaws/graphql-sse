@@ -1,6 +1,6 @@
 {
   "name": "@graphql-sse/server",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "GraphQL Subscription over SSE",
   "main": "./src/index.js",
   "scripts": {
@@ -31,5 +31,5 @@
     "access": "public",
     "directory": "../../dist/libs/server"
   },
-  "gitHead": "85399740b907705c99b5aa313d905f491d65de1e"
+  "gitHead": "d19e7c9c154625883e3b2fccc483fe48c37e688a"
 }

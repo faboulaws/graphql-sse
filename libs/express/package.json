@@ -1,6 +1,6 @@
 {
   "name": "@graphql-sse/express",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "dependencies": {
     "@graphql-sse/server": "^0.0.1"
   },
@@ -31,5 +31,6 @@
   "publishConfig": {
     "access": "public",
     "directory": "../../dist/libs/express"
-  }
+  },
+  "gitHead": "d19e7c9c154625883e3b2fccc483fe48c37e688a"
 }
