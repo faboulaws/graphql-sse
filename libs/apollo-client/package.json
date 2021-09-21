@@ -2,7 +2,7 @@
   "name": "@graphql-sse/apollo-client",
   "version": "1.0.0",
   "description": "This library was generated with [Nx](https://nx.dev).",
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,5 +10,9 @@
   "license": "MIT",
   "peerDependencies": {
     "@apollo/client": "^3x"
+  },
+  "publishConfig": {
+    "access": "public",
+    "directory": "../../dist/libs/apollo-client"
   }
 }

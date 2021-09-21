@@ -23,7 +23,11 @@
     "update": "nx migrate latest",
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
-    "help": "nx help"
+    "help": "nx help",
+    "postversion": "npm run affected:build",
+    "publish:libs": "lerna publish"
+
+
   },
   "private": true,
   "dependencies": {
@@ -60,6 +64,7 @@
     "@types/react-router-dom": "5.1.7",
     "babel-jest": "27.0.6",
     "cypress": "^8.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "dotenv": "~10.0.0",
     "eslint-plugin-cypress": "^2.10.3",
     "eslint-plugin-import": "2.22.1",
@@ -67,10 +72,16 @@
     "eslint-plugin-react": "7.23.1",
     "eslint-plugin-react-hooks": "4.2.0",
     "jest": "27.0.3",
+    "lerna": "^4.0.0",
     "prettier": "^2.3.1",
     "supertest": "^6.1.6",
     "ts-jest": "27.0.3",
     "ts-node": "~9.1.1",
     "typescript": "~4.3.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
