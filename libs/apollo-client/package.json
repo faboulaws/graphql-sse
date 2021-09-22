@@ -1,12 +1,14 @@
 {
   "name": "@graphql-sse/apollo-client",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Apollo Client link for Subscriptions over SSE",
   "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },"keywords": [
-    "Graphql Subscription","Apollo CLient",
+  },
+  "keywords": [
+    "Graphql Subscription",
+    "Apollo CLient",
     "Server Sent Event"
   ],
   "author": "",
