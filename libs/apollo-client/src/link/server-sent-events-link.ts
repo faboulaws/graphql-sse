@@ -6,9 +6,10 @@ import {
 
 export class ServerSentEventsLink extends ApolloLink {
   private subscriptionClient: SubscriptionClient;
-  constructor(options: SubscriptionClientOptions, logger: any = console) {
+  constructor(
+    options: SubscriptionClientOptions,
+  ) {
     super();
-    logger.log('Server created')
     this.subscriptionClient = SubscriptionClient.create(options);
   }
 
