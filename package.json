@@ -26,8 +26,6 @@
     "help": "nx help",
     "postversion": "npm run affected:build",
     "publish:libs": "lerna publish"
-
-
   },
   "private": true,
   "dependencies": {

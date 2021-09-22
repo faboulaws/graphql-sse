@@ -1,9 +1,7 @@
-import {
-  
+import {  
   subscribe,
   parse,
-  validate,
-  
+  validate,  
   getOperationAST,
   ExecutionResult,
   GraphQLError,
