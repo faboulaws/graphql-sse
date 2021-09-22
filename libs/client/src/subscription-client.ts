@@ -29,7 +29,7 @@ export interface Observable<T> {
 
 export class SubscriptionClient {
   constructor(
-    private options: SubscriptionClientOptions // private config: FetchEventSourceInit = {}
+    private options: SubscriptionClientOptions 
   ) {}
 
   private getObserver<T>(
@@ -50,7 +50,6 @@ export class SubscriptionClient {
 
   subscribe(request: OperationOptions): Observable<ExecutionResult> {
     const { graphQlSubscriptionUrl } = this.options;
-    // const config = this.config;
     const getObserver = this.getObserver.bind(this);
     return {
       subscribe(onNext: (ev: any) => {}, onError: (err: any) => {}) {
