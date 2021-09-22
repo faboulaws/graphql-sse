@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.14](https://github.com/faboulaws/graphql-sse/compare/@graphql-sse/client@0.0.13...@graphql-sse/client@0.0.14) (2021-09-22)
+
+
+### Bug Fixes
+
+* graphql should be a peer dependency ([29db8cf](https://github.com/faboulaws/graphql-sse/commit/29db8cf79f74b3918af4b68e4910c98071cfe4c0))
+
+
+
+
+
 ## [0.0.13](https://github.com/faboulaws/graphql-sse/compare/@graphql-sse/client@0.0.12...@graphql-sse/client@0.0.13) (2021-09-22)
 
 **Note:** Version bump only for package @graphql-sse/client
