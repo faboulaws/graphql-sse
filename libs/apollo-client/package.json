@@ -1,6 +1,6 @@
 {
   "name": "@graphql-sse/apollo-client",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "This library was generated with [Nx](https://nx.dev).",
   "main": "./src/index.js",
   "scripts": {

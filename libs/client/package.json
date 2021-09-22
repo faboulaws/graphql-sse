@@ -1,6 +1,6 @@
 {
   "name": "@graphql-sse/client",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "GraphQL Subscription client",
   "main": "dist/src/index.js",
   "scripts": {
