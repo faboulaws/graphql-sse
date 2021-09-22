@@ -17,5 +17,6 @@
   "publishConfig": {
     "access": "public",
     "directory": "../../dist/libs/apollo-client"
-  }
+  },
+  "gitHead": "2779f939645a89ba308a07daec328d87f9a7191a"
 }
