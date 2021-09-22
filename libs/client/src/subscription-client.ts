@@ -78,10 +78,6 @@ export class SubscriptionClient {
     } as Observable<ExecutionResult>;
   }
 
-  public request(request: OperationOptions): Observable<ExecutionResult> {
-    return this.subscribe(request);
-  }
-
   static create(options: SubscriptionClientOptions) {
     return new SubscriptionClient(options);
   }
