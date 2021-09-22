@@ -9,7 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@graphql-sse/client": "^0.0.1"
+    "@graphql-sse/client": "^0.0.2"
   },
   "peerDependencies": {
     "@apollo/client": "^3x"
