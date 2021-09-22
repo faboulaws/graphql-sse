@@ -1,6 +1,5 @@
 import {
   fetchEventSource,
-  FetchEventSourceInit,
 } from '@microsoft/fetch-event-source';
 import { DocumentNode, ExecutionResult } from 'graphql';
 
