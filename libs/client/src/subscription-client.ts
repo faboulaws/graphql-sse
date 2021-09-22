@@ -63,7 +63,6 @@ export class SubscriptionClient {
           },
           body: JSON.stringify(request),
           onmessage: (ev) => {
-            console.log({ ev });
             observer.next &&  observer.next(JSON.parse(ev.data));
           },
           onerror: (err) => {
