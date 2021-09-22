@@ -24,7 +24,7 @@
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "postversion": "pwd && npm run affected:build",
+    "postversion": "npm run affected:build --skip-nx-cache",
     "publish:libs": "lerna publish"
   },
   "private": true,
