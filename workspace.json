@@ -1,0 +1,311 @@
+{
+  "version": 2,
+  "projects": {
+    "apollo-client": {
+      "root": "libs/apollo-client",
+      "sourceRoot": "libs/apollo-client/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/apollo-client/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/apollo-client"],
+          "options": {
+            "jestConfig": "libs/apollo-client/jest.config.js",
+            "passWithNoTests": true
+          }
+        },"build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/apollo-client",
+            "tsConfig": "libs/apollo-client/tsconfig.lib.json",
+            "packageJson": "libs/apollo-client/package.json",
+            "main": "libs/apollo-client/src/index.ts",
+            "assets": ["libs/apollo-client/*.md"]
+          }
+        }
+      }
+    },
+    "apollo-server-example": {
+      "root": "apps/apollo-server-example",
+      "sourceRoot": "apps/apollo-server-example/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/apollo-server-example",
+            "main": "apps/apollo-server-example/src/main.ts",
+            "tsConfig": "apps/apollo-server-example/tsconfig.app.json",
+            "assets": ["apps/apollo-server-example/src/assets"],
+            "webpackConfig": "apps/apollo-server-example/webpack.config.js"
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/apollo-server-example/src/environments/environment.ts",
+                  "with": "apps/apollo-server-example/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "apollo-server-example:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["apps/apollo-server-example/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/apollo-server-example"],
+          "options": {
+            "jestConfig": "apps/apollo-server-example/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "client": {
+      "root": "libs/client",
+      "sourceRoot": "libs/client/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/client/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/client"],
+          "options": {
+            "jestConfig": "libs/client/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/client",
+            "tsConfig": "libs/client/tsconfig.lib.json",
+            "packageJson": "libs/client/package.json",
+            "main": "libs/client/src/index.ts",
+            "assets": ["libs/client/*.md"]
+          }
+        }
+      }
+    },
+    "express": {
+      "root": "libs/express",
+      "sourceRoot": "libs/express/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/express/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/express"],
+          "options": {
+            "jestConfig": "libs/express/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/express",
+            "tsConfig": "libs/express/tsconfig.lib.json",
+            "packageJson": "libs/express/package.json",
+            "main": "libs/express/src/index.ts",
+            "assets": ["libs/express/*.md"]
+          }
+        }
+      }
+    },
+    "react-app-example": {
+      "root": "apps/react-app-example",
+      "sourceRoot": "apps/react-app-example/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/web:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/react-app-example",
+            "index": "apps/react-app-example/src/index.html",
+            "main": "apps/react-app-example/src/main.tsx",
+            "polyfills": "apps/react-app-example/src/polyfills.ts",
+            "tsConfig": "apps/react-app-example/tsconfig.app.json",
+            "assets": [
+              "apps/react-app-example/src/favicon.ico",
+              "apps/react-app-example/src/assets"
+            ],
+            "styles": ["apps/react-app-example/src/styles.scss"],
+            "scripts": [],
+            "webpackConfig": "@nrwl/react/plugins/webpack"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/react-app-example/src/environments/environment.ts",
+                  "with": "apps/react-app-example/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/web:dev-server",
+          "options": {
+            "buildTarget": "react-app-example:build",
+            "hmr": true
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "react-app-example:build:production",
+              "hmr": false
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["apps/react-app-example/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/react-app-example"],
+          "options": {
+            "jestConfig": "apps/react-app-example/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "react-app-example-e2e": {
+      "root": "apps/react-app-example-e2e",
+      "sourceRoot": "apps/react-app-example-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/react-app-example-e2e/cypress.json",
+            "devServerTarget": "react-app-example:serve",
+            "tsConfig": "apps/react-app-example-e2e/tsconfig.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "react-app-example:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["apps/react-app-example-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "server": {
+      "root": "libs/server",
+      "sourceRoot": "libs/server/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/server/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/server"],
+          "options": {
+            "jestConfig": "libs/server/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/server",
+            "tsConfig": "libs/server/tsconfig.lib.json",
+            "packageJson": "libs/server/package.json",
+            "main": "libs/server/src/index.ts",
+            "assets": ["libs/server/*.md"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/node"
+  },
+  "defaultProject": "apollo-server-example",
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "style": "scss",
+        "linter": "eslint",
+        "babel": true
+      },
+      "component": {
+        "style": "scss"
+      },
+      "library": {
+        "style": "scss",
+        "linter": "eslint"
+      }
+    }
+  }
+}

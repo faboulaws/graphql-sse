@@ -1,0 +1,21 @@
+{
+  "name": "@graphql-sse/client",
+  "version": "0.0.6",
+  "description": "GraphQL Subscription client",
+  "main": "dist/src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "graphql-sse"
+  ],
+  "author": "Lod Lawson",
+  "license": "MIT",
+  "dependencies": {
+    "@microsoft/fetch-event-source": "^2.0.1"
+  },
+  "publishConfig": {
+    "access": "public",
+    "directory": "../../dist/libs/client"
+  }
+}
