@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "graphql-sse"
+    "Graphql Subscription Client","Server Sent Event"
   ],
   "author": "Lod Lawson",
   "license": "MIT",
