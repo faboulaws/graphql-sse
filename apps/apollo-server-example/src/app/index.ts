@@ -1,6 +1,6 @@
 import { createServer } from 'http';
 // import { execute, subscribe, parse, validate } from 'graphql';
-import { SubscriptionServer } from 'libs/express/src';
+import { SubscriptionServer } from '@graphql-sse/express';
 import { makeExecutableSchema } from '@graphql-tools/schema';
 import * as express from 'express';
 import { ApolloServer } from 'apollo-server-express';
