@@ -2,7 +2,7 @@
   "name": "@graphql-sse/express",
   "version": "0.0.12",
   "dependencies": {
-    "@graphql-sse/server": "^0.0.1"
+    "@graphql-sse/server": "0.0.13"
   },
   "peerDependencies": {
     "express": "^4.17.1",
