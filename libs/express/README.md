@@ -33,12 +33,12 @@ const subscriptionServer = SubscriptionServer.create({
 
 ### Apollo Server example
 
-The snippet below is a sample from the [Apollo Server Example App](https://github.com/faboulaws/graphql-sse/apps/apollo-server-example]).
+The snippet below is a sample from the [Apollo Server Example App](https://github.com/faboulaws/graphql-sse/tree/main/apps/apollo-server-example]).
 
 
 ```typescript
 import { createServer } from 'http';
-import { SubscriptionServer } from 'libs/express/src';
+import { SubscriptionServer } from '@graphql-sse/server';
 import { makeExecutableSchema } from '@graphql-tools/schema';
 import * as express from 'express';
 import { ApolloServer } from 'apollo-server-express';
