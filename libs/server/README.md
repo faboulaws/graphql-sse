@@ -10,7 +10,7 @@ npm install @graphql-sse/server
 
 ## Basic usage
 
-Here is a simple example of how to use it with express. Alternatively you can use the  `@graphql-sse/express`  package.
+Here is a simple example of how to use it with express. Alternatively you can use the `@graphql-sse/express` package.
 
 ```typescript
 import express, { RequestHandler } from "express";
