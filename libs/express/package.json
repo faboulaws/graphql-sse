@@ -20,7 +20,7 @@
   "keywords": [
     "GraphQL",
     "SSE",
-    "transport"
+    "subscription transport"
   ],
   "author": "Lod Lawson <faboulaws@gmail.com>",
   "license": "MIT",
