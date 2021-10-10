@@ -14,7 +14,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@graphql-sse/client": "^0.0.2"
+    "@graphql-sse/client": "0.0.15"
   },
   "peerDependencies": {
     "@apollo/client": "^3x"
