@@ -1,6 +1,6 @@
 # @graphql-see/express
 
-This package provide a GraphQL subscription server over Express.
+This package provides a GraphQL subscription server over Express.
 
 ## Installation
 
@@ -33,7 +33,7 @@ const subscriptionServer = SubscriptionServer.create({
 
 ### Apollo Server example
 
-The snippet below is a sample from the [Apollo Server Example App](https://github.com/faboulaws/graphql-sse/tree/main/apps/apollo-server-example]).
+The snippet below is a sample from the [Apollo Server Example App](https://github.com/faboulaws/graphql-sse/tree/main/apps/apollo-server-example).
 
 
 ```typescript

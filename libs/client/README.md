@@ -89,4 +89,4 @@ export const client = new ApolloClient({
 
 ```
 
-**Note:** Alternatively, you can use the [`@graphql-sse/apollo-client`](htts://github.com/faboulaws/grahql-sse/libs/apollo-client) that wraps this `@graphql-sse/client`. See the  [Example React App](htts://github.com/faboulaws/grahql-sse/apps/react-app-example)
+**Note:** Alternatively, you can use the [`@graphql-sse/apollo-client`](https://github.com/faboulaws/graphql-sse/tree/main/libs/apollo-client) that wraps this `@graphql-sse/client`. See the  [Example React App](https://github.com/faboulaws/graphql-sse/tree/main/apps/react-app-example)
