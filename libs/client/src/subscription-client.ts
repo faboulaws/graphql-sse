@@ -1,7 +1,5 @@
-import {
-  fetchEventSource,
-} from '@microsoft/fetch-event-source';
-import { DocumentNode, ExecutionResult } from 'graphql';
+import { fetchEventSource } from '@microsoft/fetch-event-source';
+import { ASTNode, DocumentNode, ExecutionResult, print } from 'graphql';
 
 export type SubscriptionClientOptions = {
   graphQlSubscriptionUrl: string;
@@ -27,9 +25,7 @@ export interface Observable<T> {
 }
 
 export class SubscriptionClient {
-  constructor(
-    private options: SubscriptionClientOptions 
-  ) {}
+  constructor(private options: SubscriptionClientOptions) {}
 
   private getObserver<T>(
     observerOrNext: Observer<T> | ((v: T) => void),
@@ -53,6 +49,11 @@ export class SubscriptionClient {
     return {
       subscribe(onNext: (ev: any) => {}, onError: (err: any) => {}) {
         const observer = getObserver(onNext, onError);
+        const payload = { ...request };
+        payload.query =
+          typeof request.query === 'string'
+            ? request.query
+            : print(request.query as ASTNode);
 
         fetchEventSource(graphQlSubscriptionUrl, {
           method: 'POST',
@@ -61,9 +62,9 @@ export class SubscriptionClient {
             Connection: 'keep-alive',
             Accept: '*/*',
           },
-          body: JSON.stringify(request),
+          body: JSON.stringify(payload),
           onmessage: (ev) => {
-            observer.next &&  observer.next(JSON.parse(ev.data));
+            observer.next && observer.next(JSON.parse(ev.data));
           },
           onerror: (err) => {
             observer.error && observer.error(err);
