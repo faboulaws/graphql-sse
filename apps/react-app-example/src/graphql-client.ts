@@ -7,7 +7,7 @@ const httpLink = new HttpLink({
 });
 
 const sseLink = new ServerSentEventsLink({
-  graphQlSubscriptionUrl: 'http://localhost:4000/graphql',
+  graphQlSubscriptionUrl: 'http://localhost:4000/graphql-subscription',
 });
 
 const splitLink = split(
