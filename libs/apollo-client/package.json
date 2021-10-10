@@ -1,6 +1,6 @@
 {
   "name": "@graphql-sse/apollo-client",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "Apollo Client link for Subscriptions over SSE",
   "main": "./src/index.js",
   "scripts": {
@@ -14,7 +14,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@graphql-sse/client": "0.0.15"
+    "@graphql-sse/client": "^0.0.16"
   },
   "peerDependencies": {
     "@apollo/client": "^3x"
