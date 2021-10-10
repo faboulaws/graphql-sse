@@ -1,6 +1,6 @@
 {
   "name": "@graphql-sse/express",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "dependencies": {
     "@graphql-sse/server": "0.0.13"
   },

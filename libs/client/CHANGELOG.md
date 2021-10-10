@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.15](https://github.com/faboulaws/graphql-sse/compare/@graphql-sse/client@0.0.14...@graphql-sse/client@0.0.15) (2021-10-10)
+
+**Note:** Version bump only for package @graphql-sse/client
+
+
+
+
+
 ## [0.0.14](https://github.com/faboulaws/graphql-sse/compare/@graphql-sse/client@0.0.13...@graphql-sse/client@0.0.14) (2021-09-22)
 
 
