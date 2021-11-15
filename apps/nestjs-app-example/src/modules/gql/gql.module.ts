@@ -1,12 +1,12 @@
 import { Module, OnModuleInit } from '@nestjs/common';
 import { GraphQLModule, GraphQLSchemaHost } from '@nestjs/graphql';
-import { GreetingResolver } from './resolvers/greeting.resolver';
 import { PubSubService } from './services/pub-sub.service';
-import { pubSub, TimeResolver } from './resolvers/time.resolver';
-import { CommentResolver } from './resolvers/comment.resolver';
+import { CommentResolver } from './comment/comment.resolver';
 import { SubscriptionServer } from '@graphql-sse/express';
 import { HttpAdapterHost } from '@nestjs/core';
-import { CommentService } from './services/comment.service';
+import { CommentService } from './comment/comment.service';
+import { PostResolver } from './post/post.resolver';
+import { EntityService } from './services/entity.service';
 @Module({
   imports: [
     GraphQLModule.forRoot({
@@ -15,11 +15,11 @@ import { CommentService } from './services/comment.service';
   ],
   controllers: [],
   providers: [
-    GreetingResolver,
-    TimeResolver,
     PubSubService,
     CommentService,
     CommentResolver,
+    PostResolver,
+    EntityService
   ],
 })
 export class GQLModule implements OnModuleInit {
@@ -39,12 +39,5 @@ export class GQLModule implements OnModuleInit {
 
     this.subscriptionServer = subscriptionServer;
 
-    const interval = setInterval(() => {
-      pubSub.publish('TIME_UPDATED', {
-        whatTimeNow: {
-          value: new Date().toISOString(),
-        },
-      });
-    }, 5000);
   }
 }
