@@ -2,13 +2,16 @@ import { Args, Int, Mutation, Query, Resolver, Subscription } from '@nestjs/grap
 import { CommentService } from './comment.service';
 import { PubSubService } from '../services/pub-sub.service';
 import { Comment, CreateCommentInput, CreateCommentPayload } from './comment.model';
+import { population } from "../services/population";
+import { Post } from "../post/post.model";
 
 @Resolver((of) => Comment)
 export class CommentResolver {
   constructor(
     private pubSubService: PubSubService,
     private commentService: CommentService
-  ) { }
+  ) {}
+
   // ...
   @Subscription((returns) => Comment)
   commentAdded() {
@@ -29,8 +32,8 @@ export class CommentResolver {
   }
 
   @Query(returns => [Comment])
-  comments(@Args('authorId', { type: () => Int, nullable: true }) authorId: number,
+  comments(@Args('authorId', { type: () => Int, nullable: true }) email: string,
     @Args('postId', { type: () => Int, nullable: true }) postId: number) {
-    return this.commentService.getEntities({ postId, authorId })
+    return this.commentService.getEntities({ postId, email })
   }
 }
