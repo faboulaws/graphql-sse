@@ -13,7 +13,7 @@ export class Post {
     body: string
 
     @Field(() => Int)
-    authorId: number;
+    userId: number;
 
     @Field()
     dateCreated: Date
@@ -23,10 +23,10 @@ export class Post {
 }
 
 @InputType()
-export class CreatePostInput {  
+export class CreatePostInput {
 
     @Field(() => Int)
-    authorId: number;
+    userId: number;
 
     @Field()
     title: string;

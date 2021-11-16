@@ -7,6 +7,9 @@ import { HttpAdapterHost } from '@nestjs/core';
 import { CommentService } from './comment/comment.service';
 import { PostResolver } from './post/post.resolver';
 import { EntityService } from './services/entity.service';
+import { UserResolver } from "./user/user.resolver";
+import { PostService } from "./post/post.service";
+import { UserService } from "./user/user.service";
 @Module({
   imports: [
     GraphQLModule.forRoot({
@@ -19,7 +22,9 @@ import { EntityService } from './services/entity.service';
     CommentService,
     CommentResolver,
     PostResolver,
-    EntityService
+    UserResolver,
+    PostService,
+    UserService,
   ],
 })
 export class GQLModule implements OnModuleInit {

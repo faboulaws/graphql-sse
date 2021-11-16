@@ -1,23 +1,22 @@
 import { Args, Int, Mutation, Query, Resolver, Subscription } from '@nestjs/graphql';
-import { EntityService } from '../services/entity.service';
-import { InjectEntityService } from '../services/entity.service.decorator';
 import { CreateUserInput, CreateUserPayload, User } from './user.model';
+import { UserService } from "./user.service";
 
 
 @Resolver((of) => User)
 export class UserResolver {
-    constructor(@InjectEntityService(User) private postService: EntityService<User>) { }
-  @Mutation(returns => CreateUserPayload)
-  createPost(@Args('input') postDto: CreateUserInput
-  ): CreateUserPayload {
-      const newUser = this.postService.create(postDto);
+  constructor(private userService: UserService) {}
 
-      return { user: newUser };
+  @Mutation(returns => CreateUserPayload)
+  createUser(@Args('input') userDto: CreateUserInput
+  ): CreateUserPayload {
+    const newUser = this.userService.create(userDto);
+
+    return {user: newUser};
   }
 
   @Query(returns => [User])
-  users(
-  ): User[] {
-      return this.postService.getEntities()
+  users(): User[] {
+    return this.userService.getEntities()
   }
 }
