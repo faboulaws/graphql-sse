@@ -17,7 +17,7 @@
     "@graphql-sse/client": "^0.0.16"
   },
   "peerDependencies": {
-    "@apollo/client": "^3x"
+    "@apollo/client": "3.x"
   },
   "publishConfig": {
     "access": "public",
