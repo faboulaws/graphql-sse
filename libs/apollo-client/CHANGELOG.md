@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.19](https://github.com/faboulaws/graphql-sse/compare/@graphql-sse/apollo-client@0.0.18...@graphql-sse/apollo-client@0.0.19) (2022-11-07)
+
+
+### Bug Fixes
+
+* apollo client version ([ee03cb4](https://github.com/faboulaws/graphql-sse/commit/ee03cb48f6fdd0ba6855249f3a12eaacf0b5d09a))
+
+
+
+
+
 ## [0.0.18](https://github.com/faboulaws/graphql-sse/compare/@graphql-sse/apollo-client@0.0.17...@graphql-sse/apollo-client@0.0.18) (2021-10-10)
 
 **Note:** Version bump only for package @graphql-sse/apollo-client
